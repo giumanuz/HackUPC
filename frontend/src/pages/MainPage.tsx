@@ -1,19 +1,29 @@
 import { FaFolderOpen } from "react-icons/fa6";
 import { useRef, useState } from "react";
 
-type MainPageProps = {
-  onSubmit: (files: File[]) => any;
-  loading: boolean;
-};
+import "../styles/MainPage.css";
+import {useNavigate} from "react-router-dom";
 
-function MainPage({ onSubmit, loading }: MainPageProps) {
+function MainPage() {
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const fileInputRef = useRef<HTMLInputElement>(null);
+
 
   const handleClick = () => {
     if (fileInputRef.current) {
       fileInputRef.current.click();
     }
   };
+
+
+  const onSubmit = (files: File[]) => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      navigate("/chat");
+    }, 2000);
+  }
 
   return (
     <div className={"d-flex vh-100"}>
