@@ -16,7 +16,8 @@ INCIPIT = "Be precise and don't be creative: respond to the following question u
           "the context, respond with 'I cannot answer this question'."
 
 query_engine = None
-
+HISTORY_CHAT = {}
+NUMBER_CURRENT_CHAT = 0
 
 @app.route('/')
 def home():
@@ -58,6 +59,8 @@ def upload_file():
     query_engine = return_query_engine(f"ciao {current_time}")
     end_time = datetime.now()
     print(f"LOG train: Tempo di risposta: {end_time - start_time}")
+    NUMBER_CURRENT_CHAT +=1
+    HISTORY_CHAT[NUMBER_CURRENT_CHAT] = []
     return ('', 200)
 
 
@@ -73,12 +76,23 @@ def upload_file():
 @app.route('/query', methods=['POST'])
 def query():
     query = request.form['query']
+    issafe = request.form['safemode'] == 'true'
     start_time = datetime.now()
-    response = str(query_engine.query(f"{INCIPIT} {query}"))
+    response = str(query_engine.query(f"{INCIPIT} {query}" if issafe else query))
     end_time = datetime.now()
     print(f"LOG query: Tempo di risposta: {end_time - start_time}")
+    HISTORY_CHAT[NUMBER_CURRENT_CHAT].append({'role': 'user', 'response': query})
+    HISTORY_CHAT[NUMBER_CURRENT_CHAT].append({'role': 'bot', 'response': response})
     return (response, 200)
 
+@app.route('/list_all_chat', methods=['GET'])
+def list_all_chat():
+    return HISTORY_CHAT.keys()
+
+@app.route('/get_chat', methods=['GET'])
+def get_chat():
+    chat_number = request.args.get('chat_number')
+    return HISTORY_CHAT[chat_number]
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=5001)
