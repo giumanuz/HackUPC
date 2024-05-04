@@ -1,8 +1,9 @@
 import "../styles/ChatPage.css";
 import { IoSend } from "react-icons/io5";
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import axiosInstance from "../axiosInstance.ts";
+import LangContext from "../LangContext.ts";
 
 function formatDate(date: string) {
   return new Date(date).toLocaleString();
@@ -27,6 +28,8 @@ function ChatPage() {
     ],
   });
 
+  const langContext = React.useContext(LangContext);
+
   const addMessage = (role: Role, text: string) => {
     setHistory((history) => ({
       messages: [
@@ -46,11 +49,10 @@ function ChatPage() {
     }
     addMessage(role, text);
     setWaitingForResponse(true);
-    console.log("test");
     axiosInstance
       .post("/query", {
         query: userMessage,
-        safemode: safeMode
+        safemode: safeMode,
       })
       .catch((error) => {
         console.error("Failed to send message:", error);
@@ -58,6 +60,7 @@ function ChatPage() {
       })
       .then((r) => {
         setWaitingForResponse(false);
+        if (r == null) return;
         addMessage("gpt", r.data);
       });
   };
@@ -70,6 +73,16 @@ function ChatPage() {
 
   return (
     <div className={"container-md vh-100 d-flex flex-column w-50"}>
+      <select
+        className={"ms-auto p-2 mt-2"}
+        value={langContext.lang}
+        onChange={(e) => {
+          langContext.setLang(e.currentTarget.value);
+        }}
+      >
+        <option value={"en"}>en</option>
+        <option value={"es"}>es</option>
+      </select>
       <div className={"chat-history gap-1"}>
         {history.messages.map(({ role, text, timestamp }, index) => {
           const changed = history.messages[index - 1]?.role !== role;
@@ -93,7 +106,7 @@ function ChatPage() {
           </div>
         )}
       </div>
-      <div className={"mb-5 mt-2"}>
+      <div className={"mb-5 mt-2 d-flex flex-column"}>
         <form className={"d-flex gap-3"} onSubmit={onFormSubmit}>
           <input
             type="text"
