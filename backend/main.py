@@ -42,14 +42,24 @@ def upload_file():
 
     start_time = datetime.now()
     for file in files:
-        ispdf = file.filename.endswith('.pdf')
-        istxt = file.filename.endswith('.txt')
+
         file_path = os.path.join(FOLDER_PATH, file.filename)
-        text = read_file(file_path)
-        with open(f'{FOLDER_PATH}/{file.filename[:-4]}.txt', 'w') as f:
-            f.write(text)
-    end_time = datetime.now()
-    print(f"LOG upload: Tempo di risposta: {end_time - start_time}")
+        getLogger().warn(file_path)
+        file.save(file_path)
+
+
+
+        
+    #     ispdf = file.filename.endswith('.pdf')
+    #     istxt = file.filename.endswith('.txt')
+    #     file_path = os.path.join(FOLDER_PATH, file.filename)
+    #     getLogger().warn(file_path)
+    #     text = read_file(file_path)
+    #     getLogger().warn(text)
+    #     with open(f'{FOLDER_PATH}/{file.filename[:-4]}.txt', 'w') as f:
+    #         f.write(text)
+    # end_time = datetime.now()
+    # print(f"LOG upload: Tempo di risposta: {end_time - start_time}")
 
     current_time = int(time())
     start_time = datetime.now()
