@@ -5,14 +5,14 @@ from time import time
 from datetime import datetime
 from flask import abort
 from chat_query import return_query_engine
+from logging import getLogger
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 cors = CORS(app)
 
-FOLDER_PATH = f'file_uploadati'
-INCIPIT = "Be precise and don't be creative: respond to the following question using the " \
-          "information in the provided context. If you cannot provide the answer based on " \
+FOLDER_PATH = f'/app/backend/file_uploadati'
+INCIPIT = "If you cannot provide the answer based on " \
           "the context, respond with 'I cannot answer this question'."
 
 query_engine = None
@@ -29,12 +29,11 @@ def send_query():
     return render_template('query.html')
 
 @app.route('/upload_file', methods=['POST'])
-# @cross_origin(origins="http://localhost:5173")
 def upload_file():
     global query_engine
     global NUMBER_CURRENT_CHAT
     os.makedirs(FOLDER_PATH, exist_ok=True)
-    files = request.files.getlist('fileToUpload')
+    files = request.files.getlist('file')
     for file in files:
         ispdf = file.filename.endswith('.pdf')
         istxt = file.filename.endswith('.txt')
@@ -46,18 +45,15 @@ def upload_file():
         ispdf = file.filename.endswith('.pdf')
         istxt = file.filename.endswith('.txt')
         file_path = os.path.join(FOLDER_PATH, file.filename)
-        if istxt:
-            file.save(file_path)
-        else:
-            text = read_file(file_path)
-            with open(f'{FOLDER_PATH}/{file.filename}.txt', 'w') as f:
-                f.write(text)
+        text = read_file(file_path)
+        with open(f'{FOLDER_PATH}/{file.filename[:-4]}.txt', 'w') as f:
+            f.write(text)
     end_time = datetime.now()
     print(f"LOG upload: Tempo di risposta: {end_time - start_time}")
 
     current_time = int(time())
     start_time = datetime.now()
-    query_engine = return_query_engine(f"ciao {current_time}")
+    query_engine = return_query_engine(f"basta {current_time}")
     end_time = datetime.now()
     print(f"LOG train: Tempo di risposta: {end_time - start_time}")
     NUMBER_CURRENT_CHAT +=1
@@ -79,6 +75,7 @@ def query():
     query = request.json['query']
     issafe = request.json['safemode'] == True
     start_time = datetime.now()
+    print(issafe)
     response = str(query_engine.query(f"{INCIPIT} {query}" if issafe else query))
     end_time = datetime.now()
     print(f"LOG query: Tempo di risposta: {end_time - start_time}")
