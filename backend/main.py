@@ -10,7 +10,6 @@ app = Flask(__name__)
 cors = CORS(app)
 
 FOLDER_PATH = f'file_uploadati'
-<<<<<<< HEAD
 INCIPIT = "Be precise and don't be creative: respond to the following question using the " \
           "information in the provided context. If you cannot provide the answer based on " \
           "the context, respond with 'I cannot answer this question'."
@@ -18,10 +17,6 @@ INCIPIT = "Be precise and don't be creative: respond to the following question u
 query_engine = None
 HISTORY_CHAT = {}
 NUMBER_CURRENT_CHAT = 0
-=======
-INCIPIT= "Se non hai la risposta alla seguente domanda, non devi rispondere."
-query_engine = None
->>>>>>> refs/heads/frontend2
 
 @app.route('/')
 def home():
@@ -32,10 +27,6 @@ def home():
 def send_query():
     return render_template('query.html')
 
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/heads/frontend2
 @app.route('/upload_file', methods=['POST'])
 def upload_file():
     global query_engine
@@ -60,7 +51,6 @@ def upload_file():
                 f.write(text)
     end_time = datetime.now()
     print(f"LOG upload: Tempo di risposta: {end_time - start_time}")
-<<<<<<< HEAD
 
     current_time = int(time())
     start_time = datetime.now()
@@ -101,33 +91,6 @@ def list_all_chat():
 def get_chat():
     chat_number = request.args.get('chat_number')
     return HISTORY_CHAT[chat_number]
-=======
-        
-    current_time = int(time())
-    start_time = datetime.now()
-    query_engine = return_query_engine(f"ciao {current_time}")
-    end_time = datetime.now()
-    print(f"LOG train: Tempo di risposta: {end_time - start_time}")
-    return ('', 200)
-
-# @app.route('/delete_file', methods=['POST', 'GET'])
-# def delete_file():
-#     if request.method == 'POST':
-#         file_name = request.form['fileToDelete']
-#         file_path = f'file_uploadati/{file_name}'
-#         os.remove(file_path)
-#         return redirect(url_for('home'))
-#     return render_template('index.html')
-
-@app.route('/query', methods=['POST'])
-def query():
-    query = request.form['query']
-    start_time = datetime.now()
-    response = str(query_engine.query(f"{INCIPIT} {query}"))
-    end_time = datetime.now()
-    print(f"LOG query: Tempo di risposta: {end_time - start_time}")
-    return (response, 200)
->>>>>>> refs/heads/frontend2
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=5001)
