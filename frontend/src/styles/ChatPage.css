@@ -77,6 +77,32 @@ input.message-box:disabled {
     transition: all 0.3s;
 }
 
+.microphone-button {
+    border-radius: 20px;
+    padding: 5px 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: transparent;
+    color: orange;
+    border: 2px solid orange;
+    transition: all 0.3s;
+}
+
+.microphone-button:hover {
+    background-color: orange;
+    color: white;
+    scale: 1.1;
+}
+
+.microphone-button:disabled {
+    opacity: 0.4;
+    border: none;
+}
+
 .send-button:hover {
     background-color: #4CAF50;
     color: white;
