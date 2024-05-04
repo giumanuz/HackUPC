@@ -76,7 +76,7 @@ def upload_file():
 @app.route('/query', methods=['POST'])
 def query():
     query = request.form['query']
-    issafe = request.form['safemode'] == 'true'
+    issafe = request.form['safemode'] == True
     start_time = datetime.now()
     response = str(query_engine.query(f"{INCIPIT} {query}" if issafe else query))
     end_time = datetime.now()
