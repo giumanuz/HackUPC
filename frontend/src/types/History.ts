@@ -1,14 +1,11 @@
-type ChatHistory = {
-  messages: Message[]
-}
+type ChatHistory = Message[]
 
 type Message = {
   role: Role,
-  text: string,
-  timestamp: string
+  response: string
 }
 
-type Role = "user" | "gpt"
+type Role = "user" | "bot"
 
 type Locale = {
   [key: string]: string

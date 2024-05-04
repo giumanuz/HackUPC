@@ -25,7 +25,7 @@ function MainPage() {
       formData.append("file", file);
     });
 
-    axiosInstance.postForm("/upload_file", formData).then(() => {
+    axiosInstance.post("/upload_file", formData).then(() => {
       navigate("/chat");
       setLoading(false)
     }).catch((error) => {

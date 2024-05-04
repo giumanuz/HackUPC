@@ -1,48 +1,26 @@
 import "../styles/ChatPage.css";
 import { IoSend } from "react-icons/io5";
-import React, {useContext, useState} from "react";
-import axios from "axios";
+import React, {useContext, useEffect, useState} from "react";
 import axiosInstance from "../axiosInstance.ts";
 import LangContext from "../LangContext.ts";
-
-function formatDate(date: string) {
-  return new Date(date).toLocaleString();
-}
 
 function ChatPage() {
   const langContext = React.useContext(LangContext);
   const [userMessage, setUserMessage] = useState<string>("");
   const [waitingForResponse, setWaitingForResponse] = useState<boolean>(false);
   const [safeMode, setSafeMode] = useState<boolean>(true);
-  const [history, setHistory] = useState<ChatHistory>({
-    messages: [
-      {
-        role: "user",
-        text: "Hello",
-        timestamp: "2021-09-01T12:00:00Z",
-      },
-      {
-        role: "gpt",
-        text: "Hi there! How can I help you today?",
-        timestamp: "2021-09-01T12:01:00Z",
-      },
-    ],
-  });
+  const [history, setHistory] = useState<ChatHistory>([]);
 
-  const {locale} = useContext(LangContext)
-
+  const { locale } = useContext(LangContext);
 
   const addMessage = (role: Role, text: string) => {
-    setHistory((history) => ({
-      messages: [
-        ...history.messages,
-        {
-          role,
-          text,
-          timestamp: new Date().toISOString(),
-        },
-      ],
-    }));
+    setHistory((history) => [
+      ...history,
+      {
+        role,
+        response: text,
+      },
+    ]);
   };
 
   const handleSendClick = (role: Role, text: string) => {
@@ -63,9 +41,16 @@ function ChatPage() {
       .then((r) => {
         setWaitingForResponse(false);
         if (r == null) return;
-        addMessage("gpt", r.data);
+        addMessage("bot", r.data);
       });
   };
+
+  useEffect(() => {
+    axiosInstance.get("/list_all_chat").then((r) => {
+      if (r == null) return;
+      setHistory(r.data);
+    });
+  }, [])
 
   const onFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -86,8 +71,8 @@ function ChatPage() {
         <option value={"es"}>es</option>
       </select>
       <div className={"chat-history gap-1"}>
-        {history.messages.map(({ role, text, timestamp }, index) => {
-          const changed = history.messages[index - 1]?.role !== role;
+        {history.map(({ role, response }, index) => {
+          const changed = history[index - 1]?.role !== role;
           return (
             <div
               className={
@@ -97,8 +82,7 @@ function ChatPage() {
               key={index}
             >
               {changed && <div className={"message-role"}>{locale[role]}</div>}
-              <div className={"message-text"}>{text}</div>
-              <div className={"message-date"}>{formatDate(timestamp)}</div>
+              <div className={"message-text"}>{response}</div>
             </div>
           );
         })}

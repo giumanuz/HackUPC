@@ -2,7 +2,7 @@
   "initialText": "Upload your files to start.",
   "loadingText": "We're playing chess, please wait.",
   "messageText": "Ask something...",
-  "gpt": "assistant",
+  "bot": "assistant",
   "user": "user",
   "safeMode": "Safe mode"
 }
