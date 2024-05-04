@@ -1,8 +1,7 @@
-version: "3.9"
-
 services:
   frontend:
-    image: node:22.1.0-alpine
+    build: "./frontend/"
+    command: [npm, run, dev]
     volumes: 
       - "./frontend:/app"
     working_dir: "/app"
