@@ -12,7 +12,7 @@ services:
     working_dir: "/app"
     command: [python3, main.py]
     ports:
-      - "5000:5000"
+      - "5001:5001"
     env_file:
       - backend/.env
   iris:
