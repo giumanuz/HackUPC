@@ -6,6 +6,7 @@ from datetime import datetime
 from flask import abort
 from chat_query import return_query_engine
 from flask_cors import CORS, cross_origin
+
 app = Flask(__name__)
 cors = CORS(app)
 
@@ -28,8 +29,10 @@ def send_query():
     return render_template('query.html')
 
 @app.route('/upload_file', methods=['POST'])
+# @cross_origin(origins="http://localhost:5173")
 def upload_file():
     global query_engine
+    global NUMBER_CURRENT_CHAT
     os.makedirs(FOLDER_PATH, exist_ok=True)
     files = request.files.getlist('fileToUpload')
     for file in files:
