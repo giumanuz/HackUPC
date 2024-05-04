@@ -1,0 +1,15 @@
+sqlalchemy-iris
+langchain-iris
+testcontainers-iris
+llama-iris
+sentence-transformers>=2.7.0
+langchain
+fastembed 
+openai 
+tiktoken
+python-dotenv
+pandas
+setuptools
+flask
+PyPDF2
+pypdf
