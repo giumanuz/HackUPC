@@ -52,11 +52,8 @@ function ChatPage() {
         setWaitingForResponse(false);
       }
     ).then((r) => {
-      console.log(r);
       setWaitingForResponse(false);
-      if (!r) {
-        return;
-      }
+      addMessage("gpt", r.data);
     });
   };
 

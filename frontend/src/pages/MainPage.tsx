@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 
 import "../styles/MainPage.css";
 import {useNavigate} from "react-router-dom";
+import axiosInstance from "../axiosInstance.ts";
 
 function MainPage() {
   const [loading, setLoading] = useState(false);
@@ -17,12 +18,23 @@ function MainPage() {
   };
 
 
+
+
   const onSubmit = (files: File[]) => {
+
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    const formData = new FormData();
+    files.forEach((file) => {
+      formData.append("file", file);
+    });
+
+    axiosInstance.postForm("/upload_file", formData).then(() => {
       navigate("/chat");
-    }, 2000);
+      setLoading(false)
+    }).catch((error) => {
+      console.error("Failed to upload file:", error);
+      setLoading(false);
+    });
   }
 
   return (
