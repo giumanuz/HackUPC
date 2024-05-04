@@ -20,12 +20,8 @@ function MainPage() {
 
   const onSubmit = (files: File[]) => {
     setLoading(true);
-    const formData = new FormData();
-    files.forEach((file) => {
-      formData.append("file", file);
-    });
 
-    axiosInstance.post("/upload_file", formData).then(() => {
+    axiosInstance.postForm("/upload_file", {file: files}).then(() => {
       navigate("/chat");
       setLoading(false)
     }).catch((error) => {
