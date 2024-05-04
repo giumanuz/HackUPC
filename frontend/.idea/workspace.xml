@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e98d09b-e2e8-4d5f-b150-7c5ffa17afd2" name="Changes" comment="feat: main pages">
-      <change afterPath="$PROJECT_DIR$/src/pages/ChatPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/MainPage.css" afterDir="false" />
+    <list default="true" id="2e98d09b-e2e8-4d5f-b150-7c5ffa17afd2" name="Changes" comment="feat: add chatpage navigation">
+      <change afterPath="$PROJECT_DIR$/src/types/History.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ChatPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ChatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ChatPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,29 +47,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "credentialsType com.jetbrains.nodejs.remote.NodeJSCreateRemoteSdkForm": "Docker",
-    "git-widget-placeholder": "frontend",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "docker://node:latest/node",
-    "nodejs_package_manager_path": "npm",
-    "npm.npm dev.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/home/edotm/hackupc/frontend/node_modules/prettier",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "/home/edotm/hackupc/frontend/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;credentialsType com.jetbrains.nodejs.remote.NodeJSCreateRemoteSdkForm&quot;: &quot;Docker&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;frontend&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;docker://node:latest/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.npm dev.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/edotm/hackupc/frontend/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/edotm/hackupc/frontend/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -103,7 +103,8 @@
       <option name="presentableId" value="Default" />
       <updated>1714817576989</updated>
       <workItem from="1714817578333" duration="178000" />
-      <workItem from="1714817867574" duration="4926000" />
+      <workItem from="1714817867574" duration="5147000" />
+      <workItem from="1714827661191" duration="4094000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init project">
       <option name="closed" value="true" />
@@ -121,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714821696470</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: add chatpage navigation">
+      <option name="closed" value="true" />
+      <created>1714823252012</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714823252012</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +139,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: init project" />
     <MESSAGE value="feat: main pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: main pages" />
+    <MESSAGE value="feat: add chatpage navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add chatpage navigation" />
   </component>
 </project>
