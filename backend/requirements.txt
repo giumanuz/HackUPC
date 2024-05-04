@@ -13,3 +13,4 @@ ipykernel
 setuptools
 flask
 PyPDF2
+pypdf
