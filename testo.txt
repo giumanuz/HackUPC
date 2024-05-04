@@ -1,0 +1,224 @@
+What is a hackathon?
+The word hackathon is a combination of the words "HACK", standing for creative problem-solving, and "MARATHON". These are awesome events full of creativity, technology, and passionate tech-related students of different skill ranges collaborating and creating. During a certain period of time, attendees work in teams to develop apps, games, robots… literally anything you want to build & learn about!
+About HackUPC
+HackUPC is the first student hackathon in Spain. Once a year, we aim to provide participants of all experience levels from all around the world with a space where they can improve and learn new skills, meet amazing people, and have an overall great experience!
+How to participate as Mentor
+Help and motivate hackers with your knowledge. Either because you are passionate about it, or if you've graduated more than a year ago and can't participate as a hacker, apply now as a mentor!
+How to participate as Volunteer
+Volunteers make HackUPC possible by assisting the hackers and preparing the event. By joining our team of volunteers, you will get to know how this amazing event works from the inside, meet amazing people and live a great experience!
+How to participate as Partner
+Gain visibility for your brand, introduce your products to future talents. Join us and be remembered as part of this hackathon by our participants!
+How to participate as Sponsor
+Don't just put your brand on another wall. Take the chance to shape the tech scene of tomorrow by adding real value and making it possible for hackers to build something they're proud of.
+
+During the event: Coding is the main part of HackUPC, but we have many more activities such as LEGO building, Talk and Workshop, SlideShare Show, Dodgeball, NERF Gun Battle, Sicker Exchange and much more.
+
+THE MISSION:
+Get ready for your weekend mission! HackUPC is like a space race full of activities. Have fun, complete the objectives, and get fantastic surprises. Will you be able to travel beyond the stars?
+
+When and where will everything happen?
+In our live page you will find it out! It will be available before HackUPC so that you can prepare everything you might need! And also to check out all the activities happening during the event!
+
+We also provide: 
+- Food: We’ve got you completely covered, we even have midnight snacks. Besides, you can serve yourself with cafeteria snacks
+- Sleeping: We will provide air mattresses both nights so you can boost your energy levels. Check out the FAQs for more info.
+- Sponsor: You can also visit our sponsors' stands or meet them remotely! They'll be available during the day and would love to talk to you! (you may even get some swag as well).
+
+About HackUPC
+What is HackUPC?
+HackUPC is the first student hackathon in Spain. This will be our tenth edition with lots of side activities to learn new technologies, meet interesting people and have fun. Come and make history with us!
+
+What is HackUPC?
+When is HackUPC?
+The opening ceremony starts at 7:00 p.m. on Friday, May 3rd. We expect to close this year’s edition by 5:00 p.m. on Sunday, May 5th.
+
+Where is HackUPC?
+HackUPC will take place in UPC’s North Campus FIB buildings (A3, A4, A5 and A6) in sunny Barcelona. Expect around 25ºC!
+
+What does HackUPC provide?
+HackUPC is free for all accepted hackers. We will provide you with Wi-Fi, swag, workspaces with power outlets (Type F plug), and meals (including breakfast, lunch, dinner, and snacks during the night). There will be access to the showers in a specific schedule and mattresses to relax in the sleep-enabled classrooms (there will not be one mattress per person).
+
+What can I build?
+You can build any tech-related project. We do not have restrictions over the topic. Some examples are web pages, mobile apps, hardware projects, games, an API... Remember that you can also use a variety of hardware components, from Arduino kits and Raspberry Pi's, to Amazon Echo dots and Myo Arm.
+
+What should I bring?
+All attendees must bring the following:
+
+- Valid government ID for admission
+- Laptop & charger (Be aware that Spain has Type F plugs, bring an adapter!)
+Other common checklist items include:
+- Sleeping bag
+- Comfortable clothes
+- Towel, flip-flops, and soap, we encourage all the hackers to take a shower!
+We will send you a more detailed checklist once you’re accepted.
+
+What are the judging criteria?
+Projects will mainly be judged based on technical difficulty, innovation, overall learning experience, and also, on their usability and design by a panel of selected judges from the industry.
+
+What if I have any dietary restrictions?
+Since beta 1.0, we support vegan, vegetarian, gluten-free and any type of allergies. As we always say, we’ve got you covered!
+
+Do you have a code of conduct?
+Yes, here they are: Our Code of conduct and also MLH code of conduct.
+TL;DR: Be respectful, harassment and abuse are never tolerated.
+
+Applications
+Who can attend?
+Students from all around the world who are at least 14 years old at the time of the event can apply. You can be in the university, vocational training, high school, etc. For participants under 18, we will request a letter of approval signed by parents or a legal guardian to attend
+
+What if I am not a student?
+As long as you graduated a year before the event, or later, you can still be accepted as a hacker. Nevertheless, if that isn't your case, and you don't want to miss HackUPC, you can apply as a mentor!
+
+What if I don't have coding experience?
+It's completely fine! We would love to receive your application! In fact, you come here to learn, so you don't need any previous experience.
+
+How to make a good application?
+Try to make a difference amongst other hackers, be creative! However, above all, remember to be humble. On our Medium page, you can find a great post in which are detailed all the steps to make your application even greater. Make sure you check it out!
+
+How does applying in teams work?
+When you apply, you can create or join a team. Remember that you're able to change your decision up until you, or someone in your team, is accepted. Once the team has one acceptance, you can not change the members. When more than 50% of the team members are accepted, the remaining ones are automatically accepted. Note that teams created in the registration are not definitive, so you can change your team during the hackathon.
+
+What if, in the application, I can not join my friends' team?
+Don’t worry! If you cannot join your friends in the application, it doesn't mean that you can not join them during the event. But remember that the maximum size team is 4 people.
+
+Travel Reimbursement
+Is travel reimbursement available?
+Of course! The quantity changes depending on where you come from. We are giving up to €50 for Spaniards outside of Catalonia, €120 if you are coming from Europe and up to €200 if you come from outside Europe. We want to give all of you the opportunity to join us! However, you must remember that not all participants will be eligible to receive travel reimbursement. In the end, we have a limited budget, and we want to help our participants, but we are a student organization and we have limited resources.
+
+When and how do I request it?
+Once you are accepted to the hackathon, you will need to confirm your spot, and at that moment you will be able to ask for travel reimbursement. Select the option if you want to request it. In case the option doesn't show, that means that we have run out of travel reimbursement. You will then introduce your travel cost, but take in account the receiving amount can change depending on the budget we have left.
+
+Travel reimbursement conditions and steps
+To be able to receive Travel Reimbursement money, you need to match the following criteria:
+1. Upload your tickets before 2nd May to our platform (we only accept flight, bus, or train tickets) alongside your PayPal account (we only pay this way).
+2. The arrival tickets should be after April 26th and the departure tickets should be prior to May 10th.
+3. In the hackathon, it’s mandatory to demo your project to HackUPC judges, presenting only to sponsors will not be considered valid.
+4. The project should follow all the HackUPC rules.
+5. After the hackathon, upload your Devpost link to our platform.
+
+When do I get the money?
+If you have followed the steps correctly, you may receive the money in your PayPal account around 2 months after HackUPC. We are sorry for the delay, but it takes time to check everything.
+
+Teams
+What if I don't have a team?
+No need to worry! Part of the fun of a hackathon is meeting new people. We will have a team building activity at the beginning of the event for everyone to meet and form teams.
+
+What is the max team size?
+If myTeam.length <= 4, you're good to go.
+Teams up to 4 members are welcome. Keep in mind that if your team is bigger, you won't be able to participate in any HackUPC competition or challenge, so you should split into multiple teams.
+
+Can I change my team during the hackathon? How?
+Yes, in fact, we encourage you to team up with hackers you meet there. You'll meet awesome people! To change your team, you don’t have to notify us, just adjust your team members in the final project submission.
+
+
+What if I have another question?
+DM us on instagram or X @hackupc or, if you want to contact us via email, drop us a line at contact@hackupc.com
+If your issue is related to Travel Reimbursement, write us at reimbursements@hackupc.com
+
+Login
+Big red cometSmall red cometBig purple cometSmall purple comet
+biene
+HackUPC
+Join us on our 10th edition
+750 Hackers
+May 3-5 2024 – 36 H
+Check our live page
+Rocket Smoke
+HackUPC beyond the stars
+Saturn Planet
+What is a hackathon?
+The word hackathon is a combination of the words "HACK", standing for creative problem-solving, and "MARATHON". These are awesome events full of creativity, technology, and passionate tech-related students of different skill ranges collaborating and creating. During a certain period of time, attendees work in teams to develop apps, games, robots… literally anything you want to build & learn about!
+HackUPC Logo
+About HackUPC
+HackUPC is the first student hackathon in Spain. Once a year, we aim to provide participants of all experience levels from all around the world with a space where they can improve and learn new skills, meet amazing people, and have an overall great experience!
+Rocket Smoke
+How to participate
+altText
+Mentor
+Help and motivate hackers with your knowledge. Either because you are passionate about it, or if you've graduated more than a year ago and can't participate as a hacker, apply now as a mentor!
+Closed
+altText
+Volunteer
+Volunteers make HackUPC possible by assisting the hackers and preparing the event. By joining our team of volunteers, you will get to know how this amazing event works from the inside, meet amazing people and live a great experience!
+Closed
+altText
+Partner
+Gain visibility for your brand, introduce your products to future talents. Join us and be remembered as part of this hackathon by our participants!
+Contact us
+altText
+Sponsor
+Don't just put your brand on another wall. Take the chance to shape the tech scene of tomorrow by adding real value and making it possible for hackers to build something they're proud of.
+Contact us
+Teaser
+Applications are closed
+During the event
+Coding is the main part of HackUPC, but we have many more activities
+HackUPC activities
+THE MISSION:
+HACKUPC
+Get ready for your weekend mission! HackUPC is like a space race full of activities. Have fun, complete the objectives, and get fantastic surprises. Will you be able to travel beyond the stars?
+Live
+When and where will everything happen?
+In our live page you will find it out! It will be available before HackUPC so that you can prepare everything you might need! And also to check out all the activities happening during the event.
+Check live
+We also provide...
+Food icon
+Food
+We’ve got you completely covered, we even have midnight snacks. Besides, you can serve yourself with cafeteria snacks
+Sleeping icon
+Sleeping
+We will provide air mattresses both nights so you can boost your energy levels. Check out the FAQs for more info
+Sponsors icon
+Sponsors
+You can also visit our sponsors' stands or meet them remotely! They'll be available during the day and would love to talk to you! (you may even get some swag as well)
+FAQs
+About HackUPC
+What is HackUPC?
+When is HackUPC?
+Where is HackUPC?
+What does HackUPC provide?
+What can I build?
+What should I bring?
+
+
+
+What are the judging criteria?
+What if I have any dietary restrictions?
+Do you have a code of conduct?
+
+
+Travel Reimbursement
+Is travel reimbursement available?
+When and how do I request it?
+Travel reimbursement conditions and steps
+
+When do I get the money?
+Applications
+Who can attend?
+What if I am not a student?
+What if I don't have coding experience?
+How to make a good application?
+How does applying in teams work?
+
+
+
+
+
+
+What if, in the application, I can not join my friends' team?
+Teams
+What if I don't have a team?
+What is the max team size?
+
+
+Can I change my team during the hackathon? How?
+Yes, in fact, we encourage you to team up with hackers you meet there. You'll meet awesome people!
+
+To change your team, you don’t have to notify us, just adjust your team members in the final project submission.
+What if I have another question?
+DM us on instagram or X @hackupc or, if you want to contact us via email, drop us a line at contact@hackupc.com If your issue is related to Travel Reimbursement, write us at reimbursements@hackupc.com
+
+
+Sponsors: Instersystems, Grafana, Inditex, Travelperk, Vueling, Seidor, Esa, Github, Flanks, Bluetab, Ithinkupc
+
+Partners: Upc, Fib, Telecos, Cfis, Mlh, Coeinf, Replexica, Nissin, Fritravich, Cocacola, Nestle, Incapto, Cacaolat, Risi.
