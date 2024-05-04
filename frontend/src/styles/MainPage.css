@@ -32,6 +32,5 @@
     color: aquamarine;
     border-top: 10px solid var(--bs-dark);
     border-radius: 50%;
-    animation: spin 1s linear infinite;
     margin: 40px auto auto;
 }
