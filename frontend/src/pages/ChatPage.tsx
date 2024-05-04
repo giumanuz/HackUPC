@@ -11,6 +11,7 @@ function formatDate(date: string) {
 function ChatPage() {
   const [userMessage, setUserMessage] = useState<string>("");
   const [waitingForResponse, setWaitingForResponse] = useState<boolean>(false);
+  const [safeMode, setSafeMode] = useState<boolean>(true);
   const [history, setHistory] = useState<ChatHistory>({
     messages: [
       {
@@ -45,16 +46,20 @@ function ChatPage() {
     }
     addMessage(role, text);
     setWaitingForResponse(true);
-    console.log("test")
-    axiosInstance.postForm("/query", { query: userMessage }).catch(
-      (error) => {
+    console.log("test");
+    axiosInstance
+      .post("/query", {
+        query: userMessage,
+        safemode: safeMode
+      })
+      .catch((error) => {
         console.error("Failed to send message:", error);
         setWaitingForResponse(false);
-      }
-    ).then((r) => {
-      setWaitingForResponse(false);
-      addMessage("gpt", r.data);
-    });
+      })
+      .then((r) => {
+        setWaitingForResponse(false);
+        addMessage("gpt", r.data);
+      });
   };
 
   const onFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -110,6 +115,16 @@ function ChatPage() {
             <IoSend />
           </button>
         </form>
+        <div className={"mt-2 ms-3"}>
+          <input
+            type={"checkbox"}
+            checked={safeMode}
+            onChange={(e) => setSafeMode(e.target.checked)}
+          />
+          <label className={"ms-3 align-items-center justify-content-center"}>
+            Safe mode
+          </label>
+        </div>
       </div>
     </div>
   );

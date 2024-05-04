@@ -17,11 +17,7 @@ function MainPage() {
     }
   };
 
-
-
-
   const onSubmit = (files: File[]) => {
-
     setLoading(true);
     const formData = new FormData();
     files.forEach((file) => {
