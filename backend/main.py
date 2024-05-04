@@ -6,19 +6,27 @@ from datetime import datetime
 from flask import abort
 from chat_query import return_query_engine
 from flask_cors import CORS, cross_origin
+
 app = Flask(__name__)
 cors = CORS(app)
+
 FOLDER_PATH = f'file_uploadati'
-INCIPIT= "Se non hai la risposta alla seguente domanda, non devi rispondere."
+INCIPIT = "Be precise and don't be creative: respond to the following question using the " \
+          "information in the provided context. If you cannot provide the answer based on " \
+          "the context, respond with 'I cannot answer this question'."
+
 query_engine = None
+
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
+
 @app.route('/send_query')
 def send_query():
     return render_template('query.html')
+
 
 @app.route('/upload_file', methods=['POST'])
 def upload_file():
@@ -44,13 +52,14 @@ def upload_file():
                 f.write(text)
     end_time = datetime.now()
     print(f"LOG upload: Tempo di risposta: {end_time - start_time}")
-        
+
     current_time = int(time())
     start_time = datetime.now()
     query_engine = return_query_engine(f"ciao {current_time}")
     end_time = datetime.now()
     print(f"LOG train: Tempo di risposta: {end_time - start_time}")
     return ('', 200)
+
 
 # @app.route('/delete_file', methods=['POST', 'GET'])
 # def delete_file():
@@ -69,6 +78,7 @@ def query():
     end_time = datetime.now()
     print(f"LOG query: Tempo di risposta: {end_time - start_time}")
     return (response, 200)
+
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=5001)
