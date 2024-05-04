@@ -9,3 +9,7 @@ type Message = {
 }
 
 type Role = "user" | "gpt"
+
+type Locale = {
+  [key: string]: string
+}

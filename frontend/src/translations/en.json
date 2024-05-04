@@ -1,3 +1,8 @@
 {
-  "initialText": "Hello, World!"
+  "initialText": "Upload your files to start.",
+  "loadingText": "We're playing chess, please wait.",
+  "messageText": "Ask something...",
+  "gpt": "assistant",
+  "user": "user",
+  "safeMode": "Safe mode"
 }

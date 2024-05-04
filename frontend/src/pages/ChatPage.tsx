@@ -1,6 +1,6 @@
 import "../styles/ChatPage.css";
 import { IoSend } from "react-icons/io5";
-import React, { useState } from "react";
+import React, {useContext, useState} from "react";
 import axios from "axios";
 import axiosInstance from "../axiosInstance.ts";
 import LangContext from "../LangContext.ts";
@@ -10,6 +10,7 @@ function formatDate(date: string) {
 }
 
 function ChatPage() {
+  const langContext = React.useContext(LangContext);
   const [userMessage, setUserMessage] = useState<string>("");
   const [waitingForResponse, setWaitingForResponse] = useState<boolean>(false);
   const [safeMode, setSafeMode] = useState<boolean>(true);
@@ -28,7 +29,8 @@ function ChatPage() {
     ],
   });
 
-  const langContext = React.useContext(LangContext);
+  const {locale} = useContext(LangContext)
+
 
   const addMessage = (role: Role, text: string) => {
     setHistory((history) => ({
@@ -94,7 +96,7 @@ function ChatPage() {
               }
               key={index}
             >
-              {changed && <div className={"message-role"}>{role}</div>}
+              {changed && <div className={"message-role"}>{locale[role]}</div>}
               <div className={"message-text"}>{text}</div>
               <div className={"message-date"}>{formatDate(timestamp)}</div>
             </div>
@@ -110,7 +112,7 @@ function ChatPage() {
         <form className={"d-flex gap-3"} onSubmit={onFormSubmit}>
           <input
             type="text"
-            placeholder="Type a message..."
+            placeholder={locale["messageText"]}
             className={"message-box"}
             value={userMessage}
             onChange={(event) => setUserMessage(event.target.value)}
@@ -135,7 +137,7 @@ function ChatPage() {
             onChange={(e) => setSafeMode(e.target.checked)}
           />
           <label className={"ms-3 align-items-center justify-content-center"}>
-            Safe mode
+            {locale["safeMode"]}
           </label>
         </div>
       </div>
