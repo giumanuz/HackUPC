@@ -4,8 +4,10 @@ import os
 from datetime import datetime
 from flask import abort
 from chat_query import return_query_engine
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+cors = CORS(app)
 FOLDER_PATH = f'file_uploadati'
 DOMANDA = "Di cosa parlano i promessi sposi?"
 INCIPIT= "Se non hai la risposta alla seguente domanda, non devi rispondere."

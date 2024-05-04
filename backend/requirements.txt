@@ -13,3 +13,4 @@ setuptools
 flask
 PyPDF2
 pypdf
+flask_cors
