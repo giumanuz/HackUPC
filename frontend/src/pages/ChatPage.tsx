@@ -1,6 +1,8 @@
 import "../styles/ChatPage.css";
-import {IoSend} from "react-icons/io5";
-import {useState} from "react";
+import { IoSend } from "react-icons/io5";
+import { useState } from "react";
+import axios from "axios";
+import axiosInstance from "../axiosInstance.ts";
 
 function formatDate(date: string) {
   return new Date(date).toLocaleString();
@@ -25,7 +27,7 @@ function ChatPage() {
   });
 
   const addMessage = (role: Role, text: string) => {
-    setHistory(history => ({
+    setHistory((history) => ({
       messages: [
         ...history.messages,
         {
@@ -35,7 +37,7 @@ function ChatPage() {
         },
       ],
     }));
-  }
+  };
 
   const handleSendClick = (role: Role, text: string) => {
     if (!text) {
@@ -43,25 +45,40 @@ function ChatPage() {
     }
     addMessage(role, text);
     setWaitingForResponse(true);
-    setTimeout(() => {
-      addMessage("gpt", "Haha godo (godo)");
+    console.log("test")
+    axiosInstance.postForm("/query", { query: userMessage }).catch(
+      (error) => {
+        console.error("Failed to send message:", error);
+        setWaitingForResponse(false);
+      }
+    ).then((r) => {
+      console.log(r);
       setWaitingForResponse(false);
-    }, 2000);
-  }
+      if (!r) {
+        return;
+      }
+    });
+  };
 
   const onFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     handleSendClick("user", userMessage);
     setUserMessage("");
-  }
+  };
 
   return (
     <div className={"container-md vh-100 d-flex flex-column w-50"}>
       <div className={"chat-history gap-1"}>
-        {history.messages.map(({role, text, timestamp}, index) => {
+        {history.messages.map(({ role, text, timestamp }, index) => {
           const changed = history.messages[index - 1]?.role !== role;
           return (
-            <div className={`message-bubble message-bubble-${role}` + (changed ? "" : ` message-bubble-${role}-cont`)} key={index}>
+            <div
+              className={
+                `message-bubble message-bubble-${role}` +
+                (changed ? "" : ` message-bubble-${role}-cont`)
+              }
+              key={index}
+            >
               {changed && <div className={"message-role"}>{role}</div>}
               <div className={"message-text"}>{text}</div>
               <div className={"message-date"}>{formatDate(timestamp)}</div>
@@ -93,7 +110,7 @@ function ChatPage() {
             }}
             disabled={waitingForResponse}
           >
-            <IoSend/>
+            <IoSend />
           </button>
         </form>
       </div>
