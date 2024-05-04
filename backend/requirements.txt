@@ -11,3 +11,5 @@ python-dotenv
 pandas
 ipykernel
 setuptools
+flask
+PyPDF2
