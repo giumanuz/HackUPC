@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  frontend:
+    image: node:22.1.0-alpine
+    volumes: 
+      - "./frontend:/app"
+    working_dir: "/app"
+    ports: 
+      - "5173:5173"
+  backend:
+    build: "./backend/"
+    working_dir: "/app"
+    command: [python3, main.py]
+    ports:
+      - "5000:5000"
+    env_file:
+      - backend/.env
+  iris:
+    image: intersystemsdc/iris-community:latest
+    environment:
+      IRIS_USERNAME: demo
+      IRIS_PASSWORD: demo
+    ports:
+      - "52773:52773"
