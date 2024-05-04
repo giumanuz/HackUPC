@@ -9,7 +9,6 @@ from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 cors = CORS(app)
 FOLDER_PATH = f'file_uploadati'
-DOMANDA = "Di cosa parlano i promessi sposi?"
 INCIPIT= "Se non hai la risposta alla seguente domanda, non devi rispondere."
 query_engine = None
 
@@ -51,16 +50,16 @@ def upload_file():
     query_engine = return_query_engine(f"ciao {current_time}")
     end_time = datetime.now()
     print(f"LOG train: Tempo di risposta: {end_time - start_time}")
-    return
+    return ('', 200)
 
-@app.route('/delete_file', methods=['POST', 'GET'])
-def delete_file():
-    if request.method == 'POST':
-        file_name = request.form['fileToDelete']
-        file_path = f'file_uploadati/{file_name}'
-        os.remove(file_path)
-        return redirect(url_for('home'))
-    return render_template('index.html')
+# @app.route('/delete_file', methods=['POST', 'GET'])
+# def delete_file():
+#     if request.method == 'POST':
+#         file_name = request.form['fileToDelete']
+#         file_path = f'file_uploadati/{file_name}'
+#         os.remove(file_path)
+#         return redirect(url_for('home'))
+#     return render_template('index.html')
 
 @app.route('/query', methods=['POST'])
 def query():
@@ -69,7 +68,7 @@ def query():
     response = str(query_engine.query(f"{INCIPIT} {query}"))
     end_time = datetime.now()
     print(f"LOG query: Tempo di risposta: {end_time - start_time}")
-    return response
+    return (response, 200)
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=5001)
