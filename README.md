@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" width="100" alt="project-logo">
+  <img href="frontend/logo.svg" width="100" alt="project-logo">
 </p>
 <p align="center">
-    <h1 align="center">!AGW
+    <h1 align="center">!AnotherGPT
 </h1>
 </p>
 <p align="center">
@@ -13,48 +13,18 @@
 		<em>Developed with the software and tools below.</em>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?style=flat-square&logo=GNU-Bash&logoColor=white" alt="GNU%20Bash">
-	<img src="https://img.shields.io/badge/Prettier-F7B93E.svg?style=flat-square&logo=Prettier&logoColor=black" alt="Prettier">
-	<img src="https://img.shields.io/badge/Jupyter-F37626.svg?style=flat-square&logo=Jupyter&logoColor=white" alt="Jupyter">
-	<img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=flat-square&logo=HTML5&logoColor=white" alt="HTML5">
-	<img src="https://img.shields.io/badge/YAML-CB171E.svg?style=flat-square&logo=YAML&logoColor=white" alt="YAML">
-	<img src="https://img.shields.io/badge/Bootstrap-7952B3.svg?style=flat-square&logo=Bootstrap&logoColor=white" alt="Bootstrap">
-	<img src="https://img.shields.io/badge/Vite-646CFF.svg?style=flat-square&logo=Vite&logoColor=white" alt="Vite">
 	<img src="https://img.shields.io/badge/React-61DAFB.svg?style=flat-square&logo=React&logoColor=black" alt="React">
-	<img src="https://img.shields.io/badge/Axios-5A29E4.svg?style=flat-square&logo=Axios&logoColor=white" alt="Axios">
-	<br>
-	<img src="https://img.shields.io/badge/ESLint-4B32C3.svg?style=flat-square&logo=ESLint&logoColor=white" alt="ESLint">
 	<img src="https://img.shields.io/badge/OpenAI-412991.svg?style=flat-square&logo=OpenAI&logoColor=white" alt="OpenAI">
 	<img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat-square&logo=Python&logoColor=white" alt="Python">
 	<img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=flat-square&logo=TypeScript&logoColor=white" alt="TypeScript">
 	<img src="https://img.shields.io/badge/Docker-2496ED.svg?style=flat-square&logo=Docker&logoColor=white" alt="Docker">
-	<img src="https://img.shields.io/badge/pandas-150458.svg?style=flat-square&logo=pandas&logoColor=white" alt="pandas">
-	<img src="https://img.shields.io/badge/JSON-000000.svg?style=flat-square&logo=JSON&logoColor=white" alt="JSON">
 	<img src="https://img.shields.io/badge/Flask-000000.svg?style=flat-square&logo=Flask&logoColor=white" alt="Flask">
 </p>
 
-<br><!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary><br>
-
-- [ Overview](#-overview)
-- [ Features](#-features)
-- [ Repository Structure](#-repository-structure)
-- [ Modules](#-modules)
-- [ Getting Started](#-getting-started)
-  - [ Installation](#-installation)
-  - [ Usage](#-usage)
-  - [ Tests](#-tests)
-- [ Project Roadmap](#-project-roadmap)
-- [ Contributing](#-contributing)
-- [ License](#-license)
-- [ Acknowledgments](#-acknowledgments)
-</details>
-<hr>
 
 ##  Overview
 
-<code>► ## Inspiration
+ ## Inspiration
 
 The inspiration for our project stemmed from the growing interest and utilization of large language models (LLMs) like GPT-3. We noticed that while these models are incredibly powerful, they sometimes struggle with coherence and staying on topic, especially when interacting with user-generated content. This led us to brainstorm a solution that could harness the knowledge and material provided by users to improve the LLM's abilities in a controlled manner.
 
@@ -82,13 +52,13 @@ Through this project, we gained valuable insights into the challenges and opport
 ## What's next for !AGW
 
 As students enrolled in the Master of Computer Science and Engineering program with a specialization in Artificial Intelligence, our journey doesn't end here; in fact, it's just beginning. This event has ignited our enthusiasm for AI and its potential to transform various domains, from education to healthcare and beyond.
-We are more enthusiastic than ever to continue learning and exploring new advancements in AI technology. Our next steps involve diving deeper into the intricacies of natural language processing, machine learning, and other AI-related disciplines. We plan to leverage our experiences from this project to further our understanding and contribute meaningfully to the field.</code>
+We are more enthusiastic than ever to continue learning and exploring new advancements in AI technology. Our next steps involve diving deeper into the intricacies of natural language processing, machine learning, and other AI-related disciplines. We plan to leverage our experiences from this project to further our understanding and contribute meaningfully to the field.
 
 ---
 
 ##  Features
 
-<code>► The core feature is to have a context AI for helping students enhance their study. By giving to the ai school/university material it can learn from it and therefore be more precises with the answers.
+ The core feature is to have a context AI for helping students enhance their study. By giving to the ai school/university material it can learn from it and therefore be more precises with the answers.
 The Safe mode button allows the ai to ask other LLM connected to internet to help him with the prompt since the information provided are not enough</code>
 
 
@@ -122,7 +92,7 @@ The Safe mode button allows the ai to ask other LLM connected to internet to hel
 
 <h4>From <code>source</code></h4>
 
->AConnect to the localhost port 5173 to start use the application
+>Connect to the localhost port 5173 to start use the application
 
 
 
@@ -186,3 +156,4 @@ This project is protected under the [MIT-LICENSE](https://choosealicense.com/lic
 [**Return**](#-overview)
 
 ---
+
