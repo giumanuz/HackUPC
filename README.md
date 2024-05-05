@@ -112,7 +112,7 @@ The Safe mode button allows the ai to ask other LLM connected to internet to hel
 > ```
  3. Before running docker make sure to modify the .end_sample file by adding the OPENAI-KEY and renaming the file as .env
 >
-> 4. Run Docker on terminal:
+> 4. Run Docker on terminal(may need to use log as superuser with sudo):
 > ```console
 > $ docker-compose up 
 > ```
