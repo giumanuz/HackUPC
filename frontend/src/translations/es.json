@@ -1,0 +1,10 @@
+{
+  "initialText": "Sube tus archivos para comenzar.",
+  "loadingText": "Estamos preparando todo...",
+  "messageText": "Pregunta algo...",
+  "bot": "asistente",
+  "user": "usuario",
+  "safeMode": "Modo seguro",
+  "newChat": "Nueva conversación",
+  "chat": "Chat"
+}
