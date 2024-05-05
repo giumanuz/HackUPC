@@ -64,7 +64,7 @@ def query():
 
 @app.route('/list_all_chat', methods=['GET'])
 def list_all_chat():
-    return HISTORY_CHAT.keys()
+    return list(HISTORY_CHAT.keys())
 
 @app.route('/get_chat', methods=['GET'])
 def get_chat():
