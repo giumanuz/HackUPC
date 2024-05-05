@@ -1,5 +1,5 @@
 <p align="center">
-  <img href="[frontend/logo.svg](https://github.com/giumanuz/HackUPC/blob/main/frontend/logo.svg)" width="100" alt="project-logo">
+  <img href="https://github.com/giumanuz/HackUPC/blob/main/frontend/logo.svg" width="100" alt="project-logo">
 </p>
 <p align="center">
     <h1 align="center">!AnotherGPT
