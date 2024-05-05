@@ -34,7 +34,12 @@ function ChatPage() {
     setHistory([]);
     axiosInstance.get(`/get_chat?chat_number=${chat}`).then((r) => {
       if (r == null) return;
-      setHistory(r.data);
+      const initial: Message = {
+        role: "bot",
+        response: "Hello! How can I help you today?"
+      };
+      const history = r.data
+      setHistory([initial, ...history])
     });
   };
 
