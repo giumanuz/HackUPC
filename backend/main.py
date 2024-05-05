@@ -12,8 +12,9 @@ app = Flask(__name__)
 cors = CORS(app)
 
 FOLDER_PATH = f'/app/backend/file_uploadati'
-INCIPIT = "If you cannot provide the answer based on " \
-          "the context, respond with 'I cannot answer this question'."
+INCIPIT = "Respond to the following question using the " \
+          "information in the provided context. If you cannot provide the answer based on " \
+          "the context, respond with 'I don't know how to answer this question'."
 
 query_engine = None
 HISTORY_CHAT = {}
@@ -34,18 +35,20 @@ def upload_file():
     global NUMBER_CURRENT_CHAT
     os.makedirs(FOLDER_PATH, exist_ok=True)
     files = request.files.getlist('file')
-    for file in files:
-        ispdf = file.filename.endswith('.pdf')
-        istxt = file.filename.endswith('.txt')
-        if not (ispdf or istxt):
-            abort(400, 'Invalid file format. Only PDF and TXT files are allowed.')
+    getLogger().warn(files)
+    # for file in files:
+    #     ispdf = file.filename.endswith('.pdf')
+    #     istxt = file.filename.endswith('.txt')
+    #     if not (ispdf or istxt):
+    #         abort(400, 'Invalid file format. Only PDF and TXT files are allowed.')
 
-    start_time = datetime.now()
+    # start_time = datetime.now()
     for file in files:
-
+        getLogger().warn(file)
         file_path = os.path.join(FOLDER_PATH, file.filename)
         getLogger().warn(file_path)
         file.save(file_path)
+        getLogger().warn([f for f in os.listdir(FOLDER_PATH)])
 
 
 

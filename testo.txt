@@ -1,6 +1,6 @@
 What is a hackathon?
 The word hackathon is a combination of the words "HACK", standing for creative problem-solving, and "MARATHON". These are awesome events full of creativity, technology, and passionate tech-related students of different skill ranges collaborating and creating. During a certain period of time, attendees work in teams to develop apps, games, robots… literally anything you want to build & learn about!
-About HackUPC
+What is a hackathon HackUPC
 HackUPC is the first student hackathon in Spain. Once a year, we aim to provide participants of all experience levels from all around the world with a space where they can improve and learn new skills, meet amazing people, and have an overall great experience!
 How to participate as Mentor
 Help and motivate hackers with your knowledge. Either because you are passionate about it, or if you've graduated more than a year ago and can't participate as a hacker, apply now as a mentor!
