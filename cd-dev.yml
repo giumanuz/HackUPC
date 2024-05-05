@@ -1,0 +1,24 @@
+services:
+  frontend:
+    build: "./frontend/"
+    command: [npm, run, dev]
+    working_dir: "/app"
+    ports: 
+      - "5173:5173"
+    volumes:
+      - "./frontend/:/app"
+  backend:
+    build: "./backend/"
+    working_dir: "/app"
+    command: [python3, main.py]
+    ports:
+      - "5001:5001"
+    env_file:
+      - backend/.env
+  iris:
+    image: intersystemsdc/iris-community:latest
+    environment:
+      IRIS_USERNAME: demo
+      IRIS_PASSWORD: demo
+    ports:
+      - "52773:52773"

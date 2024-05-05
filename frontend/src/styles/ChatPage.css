@@ -14,22 +14,22 @@
 }
 
 .message-bubble-user {
-    background-color: rgba(194, 194, 238, 0.19);
+    background-color: rgba(105, 105, 224, 0.56);
     border-radius: 20px 20px 5px 20px;
     margin-left: auto;
 }
 
-.message-bubble-gpt {
-    background-color: rgba(241, 240, 240, 0.19);
+.message-bubble-bot {
+    background-color: rgba(241, 240, 240, 0.12);
     border-radius: 20px 20px 20px 5px;
-    margin-right: auto;
+    margin-right: auto; 
 }
 
 .message-bubble-user-cont {
     border-top-right-radius: 5px;
 }
 
-.message-bubble-gpt-cont {
+.message-bubble-bot-cont {
     border-top-left-radius: 5px;
 }
 
