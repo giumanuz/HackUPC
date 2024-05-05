@@ -4,5 +4,7 @@
   "messageText": "Ask something...",
   "bot": "assistant",
   "user": "user",
-  "safeMode": "Safe mode"
+  "safeMode": "Safe mode",
+  "newChat": "New chat",
+  "chat": "Chat"
 }

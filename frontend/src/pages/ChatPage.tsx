@@ -3,6 +3,8 @@ import { IoSend } from "react-icons/io5";
 import React, { useContext, useEffect, useState } from "react";
 import axiosInstance from "../axiosInstance.ts";
 import LangContext from "../LangContext.ts";
+import { FaPlus } from "react-icons/fa";
+import {useNavigate} from "react-router-dom";
 
 function ChatPage() {
   const langContext = React.useContext(LangContext);
@@ -14,6 +16,8 @@ function ChatPage() {
   const [numberOfChats, setNumberOfChats] = useState<number>(1);
 
   const { locale } = useContext(LangContext);
+
+  const navigate = useNavigate()
 
   const addMessage = (role: Role, text: string) => {
     setHistory((history) => [
@@ -60,7 +64,7 @@ function ChatPage() {
     axiosInstance.get("/list_all_chat").then((r) => {
       if (r == null) return;
       setNumberOfChats(r.data.length);
-      changeChat(1);
+      changeChat(r.data.at(-1));
     });
   }, []);
 
@@ -83,26 +87,27 @@ function ChatPage() {
                 onClick={() => {
                   changeChat(chatNumber);
                 }}
-                className={"select-chat-button " + (chatNumber === selectedChat ? "selected" : "")}
+                className={
+                  "select-chat-button " +
+                  (chatNumber === selectedChat ? "selected" : "")
+                }
               >
-                Chat {chatNumber}
+                {locale["chat"]} {chatNumber}
               </button>
             );
           })}
+        <button
+          className={
+            "new-chat-button align-items-center justify-content-center d-flex gap-2"
+          }
+          onClick={() => navigate("/")}
+        >
+          <FaPlus /> {locale["newChat"]}
+        </button>
       </div>
       <div className={"col-2 container-md vh-100 d-flex flex-column w-50"}>
-        <select
-          className={"ms-auto p-2 mt-2"}
-          value={langContext.lang}
-          onChange={(e) => {
-            langContext.setLang(e.currentTarget.value);
-          }}
-        >
-          <option value={"en"}>en</option>
-          <option value={"es"}>es</option>
-        </select>
         <div className={"chat-history gap-1"}>
-          {history.map(({role, response}, index) => {
+          {history.map(({ role, response }, index) => {
             const changed = history[index - 1]?.role !== role;
             return (
               <div
@@ -144,7 +149,7 @@ function ChatPage() {
               }}
               disabled={waitingForResponse}
             >
-              <IoSend/>
+              <IoSend />
             </button>
           </form>
           <div className={"mt-2 ms-3"}>
@@ -159,7 +164,14 @@ function ChatPage() {
           </div>
         </div>
       </div>
-      <div className={"col"}></div>
+      <div className={"col d-flex flex-column gap-2 pt-4 px-5"}>
+        <button className={"select-chat-button lang-btn ms-auto" + (langContext.lang === "en" ? " selected" : "")} onClick={() => langContext.setLang("en")}>
+          English
+        </button>
+        <button className={"select-chat-button lang-btn ms-auto" + (langContext.lang === "es" ? " selected" : "")} onClick={() => langContext.setLang("es")}>
+          Español
+        </button>
+      </div>
     </div>
   );
 }

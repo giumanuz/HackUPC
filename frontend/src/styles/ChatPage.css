@@ -139,6 +139,25 @@ input.message-box:disabled {
     color: white;
 }
 
+.new-chat-button {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(160, 160, 160, 0.15);
+    border: none;
+    color: #a0a0a0;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bolder;
+}
+.new-chat-button:hover {
+    background-color: rgba(160, 160, 160, 0.3);
+}
+
+.lang-btn {
+    max-width: 130px;
+}
+
 @keyframes blink {
     0% {
         opacity: 0.5;
