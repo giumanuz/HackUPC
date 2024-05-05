@@ -68,7 +68,7 @@ def list_all_chat():
 
 @app.route('/get_chat', methods=['GET'])
 def get_chat():
-    chat_number = request.args.get('chat_number')
+    chat_number = int(request.args.get('chat_number'))
     return HISTORY_CHAT[chat_number]
 
 if __name__ == '__main__':
