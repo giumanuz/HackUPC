@@ -25,6 +25,7 @@
 https://github.com/giumanuz/HackUPC/assets/88536667/e2552269-33a5-4f86-8f17-49d43f52e26a
 
 ## Inspiration
+## Inspiration
 
 The inspiration for our project stemmed from the growing interest and utilization of large language models (LLMs) like GPT-3. We noticed that while these models are incredibly powerful, they sometimes struggle with coherence and staying on topic, especially when interacting with user-generated content. This led us to brainstorm a solution that could harness the knowledge and material provided by users to improve the LLM's abilities in a controlled manner.
 
