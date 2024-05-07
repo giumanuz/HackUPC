@@ -37,6 +37,3 @@ def return_query_engine(table_name: str):
     )
     query_engine = index.as_query_engine()
     return query_engine
-
-
-###### response = query_engine.query("Summary the essay")
