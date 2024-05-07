@@ -26,7 +26,6 @@ https://github.com/giumanuz/HackUPC/assets/88536667/e2552269-33a5-4f86-8f17-49d4
 
 ## Inspiration
 
-
 The inspiration for our project stemmed from the growing interest and utilization of large language models (LLMs) like GPT-3. We noticed that while these models are incredibly powerful, they sometimes struggle with coherence and staying on topic, especially when interacting with user-generated content. This led us to brainstorm a solution that could harness the knowledge and material provided by users to improve the LLM's abilities in a controlled manner.
 
 ## What it does
@@ -55,12 +54,29 @@ Through this project, we gained valuable insights into the challenges and opport
 As students enrolled in the Master of Computer Science and Engineering program with a specialization in Artificial Intelligence, our journey doesn't end here; in fact, it's just beginning. This event has ignited our enthusiasm for AI and its potential to transform various domains, from education to healthcare and beyond.
 We are more enthusiastic than ever to continue learning and exploring new advancements in AI technology. Our next steps involve diving deeper into the intricacies of natural language processing, machine learning, and other AI-related disciplines. We plan to leverage our experiences from this project to further our understanding and contribute meaningfully to the field.
 
----
 
 ##  Features
 
- The core feature is to have a context AI for helping students enhance their study. By giving to the ai school/university material it can learn from it and therefore be more precises with the answers.
-The Safe mode button allows the ai to ask other LLM connected to internet to help him with the prompt since the information provided are not enough</code>
+The core feature is to have a context AI for helping students enhance their study. By giving to the ai school/university material it can learn from it and therefore be more precises with the answers.
+This project is an AI-based system that combines text parsing, a vector database, and ChatGPT to provide intelligent responses to user queries. Below is an outline of how the system works:
+### 1. Document Upload
+
+Users can upload documents in various formats, such as PDF or plain text files. These documents contain information that is parsed and stored in the system for later retrieval.
+### 2. Text Parsing and Vector Database Creation
+
+Once the documents are uploaded, the system parses the text to extract relevant content. This text is then converted into vectors and stored in a vector database. A vector database allows for efficient similarity searches, enabling the system to quickly find relevant information based on user queries.
+### 3. Query Execution
+
+After the documents are processed and the vector database is populated, users can execute queries to retrieve specific information. The system performs a search in the vector database to gather responses based on the information from the uploaded documents.
+### 4. Integration with ChatGPT
+
+Once the initial response is retrieved from the vector database, it is passed to ChatGPT via the API. ChatGPT processes this information and provides a comprehensive response, summarizing and integrating the data obtained from the vector database.
+### 5. Safe Mode and Creative Mode
+
+The system offers two modes of operation:
+
+- Safe Mode: In this mode, ChatGPT is limited to responses based solely on the information contained in the uploaded documents. This ensures that the responses are strictly grounded in the provided context, reducing the risk of generating inaccurate or fabricated information.
+- Creative Mode: When Safe Mode is disabled, ChatGPT can draw on its broader knowledge base to generate responses. This mode allows for more creativity in the responses but may introduce a higher risk of ChatGPT providing information that is not strictly based on the uploaded documents.
 
 
 
@@ -81,7 +97,7 @@ The Safe mode button allows the ai to ask other LLM connected to internet to hel
 > ```console
 > $ cd HackUPC
 > ```
- 3. Before running docker make sure to modify the .end_sample file by adding the OPENAI-KEY and renaming the file as .env
+ 3. Before running docker make sure to modify the .env_sample file by adding the OPENAI-KEY and renaming the file as .env
 >
 > 4. Run Docker on terminal(may need to use log as superuser with sudo):
 > ```console
